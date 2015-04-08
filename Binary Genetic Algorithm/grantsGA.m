@@ -33,10 +33,8 @@ for Gen = 1:limit
     if current > best
         best = current;
         bestGenome = xy(currentIdx,:);
+        fprintf('Gen: %d    Best Fitness: %d\n', Gen, best);
     end
-    
-    %% Print Stats
-    fprintf('Gen: %d    Best Fitness: %d\n', Gen, best);
     
     %% Tournament Selection
     T = round(rand(2*popSize,S)*(popSize-1)+1);     % Tournaments
